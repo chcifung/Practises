@@ -1,0 +1,10 @@
+body{
+	font-family: "Helvetica","Ariel",sans-serif;
+	font-size: 20px;
+}
+
+abbr{
+	text-decoration:none;
+	border:0;
+	font-style:normal;
+}
