@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test html</title>
+	<style type="text/css">
+		body{
+			padding: 0px;
+			font-size: 20px;
+			behavior:url(css/csshover.htc);
+		}
+		.topmenu{
+			display: block;
+			width:220px;
+			border: 2px solid #e4393c;
+		}
+		.toptitle{
+			height: 40px;
+			line-height: 40px;
+			text-align: left;
+			font-size: 21px;
+			font-weight: bold;
+			color: white;
+			background-color: #e4393c;
+			padding-left: 20px;
+		}
+		.topmenu li{
+			height: 30px;
+			line-height: 30px;
+			font-size: 11pt;
+			list-style-type: none;
+			text-align: left;
+			padding-left: 8px;
+			z-index: 3;
+			background-image: url(http://img.mukewang.com/5411027300014f0200220030.jpg);
+			background-repeat: no-repeat;
+			background-position: right; 
+			}
+			.topmenu li a{
+				text-decoration: none;
+				color: #313131;
+			}
+			.topmenu li a:hover{
+				text-decoration: underline;
+				font-weight: bold;
+				color:#e4393c;
+			}
+			.topmenu .lihover{
+				border: 1px solid #ddd;
+				border-right: 0;
+				box-shadow: 0 0 8px #ddd;
+				-moz-box-shadow:0 0 8px #ddd;
+				-webkit-box-shadow:0 0 8px #ddd;
+				background-image: none;
+			}
+			.submenu{
+				 display: none;
+				 width:715px;
+				 left:270px;
+				 position: absolute;
+				 top: 40px;
+				 border: 1px solid #ddd;
+				 z-index: 4;
+				 background:white;
+				 box-shadow: 0 0 8px #ddd;
+				-moz-box-shadow:0 0 8px #ddd;
+				-webkit-box-shadow:0 0 8px #ddd;
+			}
+			.leftdiv{
+				float:left;
+				width:490px;
+				margin: 5px;
+			}
+			.rightdiv{
+				float: left;
+				width: 200px;
+				margin: 5px;
+			}
+			.topmenu .lihover .submenu{
+				display: block;
+			}
+			.topmenu .lihover span{
+				background:white;
+				display: inline-block;
+				z-index: 20;
+				width:20px;
+				height: 30px;
+				float: right;
+				position: relative;
+			}
+			.leftdiv dl{
+				display: block;
+				border-bottom: 1px solid #ddd;
+				padding-bottom: 6px;
+				overflow: hidden;
+			}
+			.leftdiv dl dt{
+				display: block;
+				float: left;
+				width: 60px;
+				text-align: right;
+				height: 22px;
+				line-height: 22px;
+				padding-right: 6px;
+			}
+			.leftdiv dl dt a{
+				color: #e4393c;
+				font-weight: bold;
+				text-decoration: underline;
+				font-size: 10pt;
+			}
+
+			.leftdiv dl dd{
+				display: block;
+				overflow: hidden;
+			}
+
+			.leftdiv dl dd a{
+				display: block;
+				float: left;
+				border-left: 1px solid #ccc;
+				font-size: 9pt;
+				color: #737373;
+				padding: 0 8px;
+				height: 14px;
+				line-height: 14px;
+				margin: 4px 0;
+			}
+			.rightdiv dl dd{
+				margin: 3px 0;
+			}
+
+			.rightdiv dl dt{
+				color: #e4393c;
+				font-weight: bold;
+				font-size: 10pt;
+			}
+			.rightdiv dl dd a{
+				font-size: 9pt;
+				color: #737373;
+				line-height: 22px;
+			}
+			.rightdiv dl dd a:hover{
+				color:#737373;
+				font-weight: normal;
+			}
+			}
+	</style>
+</head>
+<body>
+	<script src="test.js"></script>
+	<ul class="topmenu">
+		<div class="toptitle">全部商品分类</div>
+		<li><a href="#">家用电器<span></span></a>
+		<div class="submenu">
+			<div class="leftdiv">
+				<dl>
+					<dt><a href="#">电子书</a></dt>
+					<dd>
+						<a href="#">免费</a>
+						<a href="#">小说</a>
+						<a href="#">励志与成功</a>
+						<a href="#">文学</a>
+						<a href="#">经管</a>
+						<a href="#">畅读VIP</a>
+					</dd>
+				</dl>
+			</div>
+			<div class="rightdiv">
+				<dl>
+					<dd><a href="http://sale.jd.com/act/60NWaC1YKX.html"><img src="http://img13.360buyimg.com/vclist/jfs/t2776/190/3024060763/7434/f734afee/577f019cN4ea29161.jpg"></a></dd>
+					<dd>img2</dd>
+				</dl>
+
+				<dl>
+					<dt>推荐品牌</dt>
+					<dd>
+						<a href="#">没得热水器</a>
+					</dd>
+				</dl>
+			</div>
+			
+		</div>
+		</li>
+		<li><a href="#">手机、数码、京东通信</a></li>
+		<li><a href="#">电脑、办公</a></li>
+		<li><a href="#">家居、家具、家装、厨具</a></li>
+		<li><a href="#">男装、女装、童装、内衣</a></li>
+		<li><a href="#">个护化妆、清洁用品、宠物</a></li>
+		<li><a href="#">鞋靴、箱包、珠宝、奢侈品</a></li>
+		<li><a href="#">运动户外、钟表</a></li>
+		<li><a href="#">汽车、汽车用品</a></li>
+		<li><a href="#">母婴、玩具乐器</a></li>
+		<li><a href="#">食品、酒类、生鲜、特产</a></li>
+		<li><a href="#">医药保健</a></li>
+		<li><a href="#">图书、音像、电子书</a></li>
+		<li><a href="#">彩票、旅行、充值、票务</a></li>
+		<li><a href="#">理财、众筹、白条、保险</a></li>
+	</ul>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+</body>
+</html>
