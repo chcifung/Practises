@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html">
+	<title>taobao demo</title>
+	<style type="text/css">
+	@font-face{font-family: iconfont; src:url(http://g.tncdn.cn/tb/icon-font/1.1.5/iconfont.eot);}
+		body{font:22px/1.5 tahoma,arial,sans-serif;}		}
+		a{text-decoration: none;}
+		.search-tips{float: right;}
+		.search-tips a{color: #6c6c6c;}
+		.search-button{float: right;}
+		.search-container{position: relative;}
+		.btn-search{
+			background:url(http://gtmas01.alicdn.com/tps/il/Tlqyj8fc8aXXc4E9bI-400-300.png); 
+			width:100px;
+			height: 45px;
+			background-position: 0 -200px;
+			border: 0;
+			cursor: pointer;
+		}
+		.search-common-pannel i{
+			position:absolute;
+			top:14px;
+			left: 86px;
+			z-index: 2;
+			font-color:#ccc;
+		}
+		.search-common-pannel input{
+			height: 39px;
+			line-height: 39px;
+			width: 100%;
+			border: 0 none;
+			outline: 0;
+			background-color: white;
+		}
+		.search-common-pannel{
+			height: 39px;
+			background-color: #f50;
+			overflow: hidden;
+			padding: 3px 3px  3px 77px;
+		}
+		.iconfont{font-family: iconfont;
+			font-size: 22px;
+			font-style: normal;}
+		ul{
+			list-style: none;
+			display: block;
+		}
+		ul, li{
+			margin: 0;
+			padding: 0;
+		}
+		.search-list{
+			position: absolute;
+			top: 3px;
+			left: 3px;
+			width: 72px;
+			height: 39px;
+			overflow: hidden;
+			background: #fff;
+			border-left:1px solid #ccc;
+			border-right: 1px solid #ccc;
+		}
+		.search-list li{
+			display: block;
+			height: 39px;
+			line-height: 39px;
+			overflow: hidden;
+			text-align: center;
+		}
+		.search-list li a{
+			color:#ccc;
+			text-decoration: none;
+		}
+		.selected{
+			background:#f6f6f6;
+		}
+	</style>
+</head>
+<body>
+	<div class="search-container">
+		<div class="search-list">
+			<ul>
+				<li id="tab_1" class="selected">
+					<a href="#">宝贝</a>
+				</li>
+				<li id="tab_2">
+					<a href="#">店铺</a>
+				</li>
+			</ul>
+		</div>
+		<div class="search-pannel">
+			<form>
+			<div class="search-tips">
+				<a href="#">
+					高级<br>搜索
+				</a>
+			</div>
+			<div class="search-button">
+				<button type="submit" class="btn-search"></button>
+			</div>
+			<div class="search-common-pannel">
+				<input type="text" x-webkit-speech="">
+				<i class="iconfont">o"</i>
+			</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
