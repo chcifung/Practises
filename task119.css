@@ -1,0 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background-color: rgb(114,40,114);
+  width: 1920px;
+  height: 80px;
+  positon: fixed;
+  left: 0;
+  top; 0;
+}
+
+.nav{
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.logo img{
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+}
+
+ul{
+  list-style: none;
+  position: relative;
+  float: right;
+}
+
+li a{
+  text-decoration: none;
+  color: #666;
+}
+
+li{
+  font-size: 18px;
+  postion: relative;
+  float: left;
+  text-transform: uppercase;
+  margin: 30px 20px;
+  font-family: "Simhei";
+}
+
+div{
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.intro{
+  height: 388px;
+  background-color: rgb(170,170,170);
+}
+
+.intro p,h2{
+  color: white;
+}
+
+.intro img{
+  width: 250px;
+  height: 250px;
+  border-radius: 250px;
+  position: relative;
+  float: right;
+}
+
+.prof{
+  height: 1190px;
+  background-color: rgb(238,238,238);
+}
+
+.prof img{
+  width: 420px;
+  height: 303px;
+  margin: 20px;
+  padding: 10px;
+}
+
+.contact{
+  height: 748px;
+  background-color: rgb(238,238,238);
+  border-top: 1px solid rgb(170,170,170);
+}
