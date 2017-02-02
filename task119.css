@@ -52,10 +52,17 @@ div{
 .intro{
   height: 388px;
   background-color: rgb(170,170,170);
+  overflow: hidden;
 }
 
 .intro p,h2{
   color: white;
+  text-align: center;
+  font-family: "Simhei";
+}
+
+.intro>p{
+  padding-top: 130px;
 }
 
 .intro img{
