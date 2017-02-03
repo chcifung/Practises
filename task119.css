@@ -55,14 +55,18 @@ div{
   overflow: hidden;
 }
 
-.intro p,h2{
+.text1{
   color: white;
   text-align: center;
   font-family: "Simhei";
+  width: 560px;
+  float: left;
+  padding-top: 100px;
+  padding-left: 50px;
 }
 
-.intro>p{
-  padding-top: 130px;
+.text1>p{
+  font-size: 1.4em;
 }
 
 .intro img{
@@ -71,6 +75,7 @@ div{
   border-radius: 250px;
   position: relative;
   float: right;
+  margin-right: 60px;
 }
 
 .prof{
