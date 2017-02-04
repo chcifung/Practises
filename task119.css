@@ -57,16 +57,22 @@ div{
 
 .text1{
   color: white;
-  text-align: center;
-  font-family: "Simhei";
-  width: 560px;
+  text-align: right;
+  font-family: "Microsoft Yahei";
+  width: 580px;
   float: left;
   padding-top: 100px;
-  padding-left: 50px;
+  padding-left: 20px;
 }
 
 .text1>p{
-  font-size: 1.4em;
+  font-size: 1.2em;
+}
+
+.text1>h2{
+  font-size: 1.2em;
+  line-height: 3.6em;
+  font-family: Arial;
 }
 
 .intro img{
@@ -75,7 +81,8 @@ div{
   border-radius: 250px;
   position: relative;
   float: right;
-  margin-right: 60px;
+  margin-right: 40px;
+  margin-top: 80px;
 }
 
 .prof{
