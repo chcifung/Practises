@@ -86,8 +86,17 @@ div{
 }
 
 .prof{
-  height: 1190px;
+  height: 1220px;
   background-color: rgb(238,238,238);
+}
+
+.prof>h1{
+  text-align: center;
+  font-size: 1.8em;
+  font-family: Arial;
+  color: grey;
+  padding-top: 30px;
+  line-height: 2em;
 }
 
 .prof img{
@@ -103,3 +112,11 @@ div{
   border-top: 1px solid rgb(170,170,170);
 }
 
+.contact>h1{
+  text-align: center;
+  font-size: 1.8em;
+  font-family: Arial;
+  color: grey;
+  padding-top: 30px;
+  line-height: 2em;
+}
