@@ -7,7 +7,7 @@ header{
   background-color: rgb(114,40,114);
   width: 1920px;
   height: 80px;
-  positon: fixed;
+  position: fixed;
   left: 0;
   top; 0;
 }
@@ -119,4 +119,22 @@ div{
   color: grey;
   padding-top: 30px;
   line-height: 2em;
+}
+
+.page{
+  background-color: rgb(170,170,170);
+  height: 280px;
+  width: 1920px;
+  position: relative;
+}
+
+.copyright{
+  background-color: rgb(114,40,114);
+  width: 1920px;
+  height: 80px;
+  left: 0;
+  bottom: 0;
+  position: relative;
+  color: white;
+  text-align: center;
 }
