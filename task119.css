@@ -126,8 +126,23 @@ div{
   height: 280px;
   width: 1920px;
   position: relative;
+  color: white;
+  font-family: "Simhei";
 }
 
+.left{
+  position: relative;
+  float: left;
+  left: 25%;
+  top: 30px;
+}
+
+.right{
+  position: relative;
+  float: right;
+  left: 15%;
+  top: 0px;
+}
 .copyright{
   background-color: rgb(114,40,114);
   width: 1920px;
@@ -137,4 +152,7 @@ div{
   position: relative;
   color: white;
   text-align: center;
+  font-size: 1.4em;
+  font-family: Arial;
+  line-height: 2.8em;
 }
