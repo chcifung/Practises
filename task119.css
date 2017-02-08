@@ -112,7 +112,7 @@ div{
   border-top: 1px solid rgb(170,170,170);
 }
 
-.contact>h1{
+.p01>h1{
   text-align: center;
   font-size: 1.8em;
   font-family: Arial;
@@ -120,6 +120,52 @@ div{
   padding-top: 30px;
   line-height: 2em;
 }
+
+form>input{
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 400px;
+  height: 50px;
+  margin-left: 30px;
+  background-color: rgb(238,238,238);
+  font-size: 2em;
+}
+
+.btn1{
+  width: 50px;
+  height: 30px;
+  margin: 30px;
+  font-size: 1em;
+  color: rgb(138,138,138);
+}
+
+
+ textarea{
+  border: none;
+  border-bottom: 1px solid grey;
+  width: 400px;
+  height: 130px;
+  margin-left: 30px;
+  background-color: rgb(238,238,238);
+  font-size: 2.3em;
+ }
+
+ .p01{
+  position: relative;
+  float: left;
+ }
+
+ .p11{
+  position: relative;
+  float: left;
+  width: 450px;
+  left: 500px;
+  top: -360px;
+  color: rgb(118,118,118);
+  font-family: Arial;
+  font-size: 1.4em;
+  line-height: 1.8em;
+ }
 
 .page{
   background-color: rgb(170,170,170);
