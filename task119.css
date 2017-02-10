@@ -178,9 +178,8 @@ form>input{
 
 .left{
   position: relative;
-  float: left;
-  left: 25%;
-  top: 30px;
+  left: -300px;
+  top: 40px;
 }
 
 .right{
