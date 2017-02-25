@@ -1,0 +1,29 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: green;
+}
+
+
+.main{
+	position: relative;
+	height: 300px;
+	width: 500px;
+	margin: 120px auto;
+	background-color: white;
+}
+
+#btn1{
+	position: absolute;
+	right: 10px;
+	bottom: 12px;
+	width: 80px;
+	height: 30px;
+	padding: 5px;
+	border-radius: 5px;
+	color: white;
+	background-color: green;
+}
