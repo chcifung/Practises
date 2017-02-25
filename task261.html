@@ -3,30 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <title>task261</title>
+  <link type="text/css" rel="stylesheet" href="task261.css"></style>
 </head>
 <body>
-  <div class="container-fluid">
-  <div class = "row text-center">
-    <h2>Cat Photo Finder</h2>
-  </div>
-  <div class = "row text-center">
-    <div class = "col-xs-12 well message">
-      The message will go here
+    <div class="main">
+    <div id="selected"></div>
+    <button><a href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22The%20significant%20problems%20we%20face%20cannot%20be%20solved%20at%20the%20same%20level%20of%20thinking%20we%20were%20at%20when%20we%20created%20them.%22%20Albert%20Einstein"><img src=""></a></button>
+    <button id="btn1" type="button" name="" onclick="selectQ()">New Quote</button>
+    
     </div>
-  </div>
-  <div class = "row text-center">
-    <div class = "col-xs-12">
-      <button id = "getMessage" class = "btn btn-primary">
-        Get Message
-      </button>
-    </div>
-  </div>
-</div>
+  <script type="text/javascript" src='http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
   <script>
+  var quotes = [{id:1,scentence:"All things in their being are good for something."},{id:2,scentence:"Difficult circumstances serve as a textbook of life for people."},{id:3,scentence:"Failure is the mother of success.——Thomas Paine"},{id:4,scentence:"For man is man and master of his fate."},{id:5,scentence:"The unexamined life is not worth living.——Socrates"},{id:6,scentence:"None is of freedom or of life deserving unless he daily conquers it anew.——Erasmus"},{id:7,scentence:"Our destiny offers not the cup of despair, but the chalice of opportunity. So let us seize it, not in fear, but in gladness.——R.M. Nixon"}];
+
+  $(function(){
+    for(var i=0;i<quotes.length;i++){
+      var quotes = $("<tr></tr>");
+      quotes.append(quotes[i].scentence);
+      $("#quotes").append(quotes);
+    }
+  });
+
+  function selectQ(){
+    var s = parseInt(Math.random()*quotes.length);
+    $("#selected").append("选择的格言ID"+quotes[s].id +quotes[s].scentence +"</br>");
+  };
+
   $(document).ready(function() {
     // Only change code below this line.
     $("#getMessage").on("click", function(){
-
+        $(".message").html("this is a chcifung 's new site");
 });
     // Only change code above this line.
   });
