@@ -8,7 +8,7 @@
 <body>
     <div class="main">
     <div id="selected"></div>
-    <button><a href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22The%20significant%20problems%20we%20face%20cannot%20be%20solved%20at%20the%20same%20level%20of%20thinking%20we%20were%20at%20when%20we%20created%20them.%22%20Albert%20Einstein"><img src=""></a></button>
+    <button id="btn2" target="_blank" onclick="shareW()"><a href=""><img src="images/tweet.png"></a></button>
     <button id="btn1" type="button" name="" onclick="selectQ()">New Quote</button>
     
     </div>
@@ -16,17 +16,16 @@
   <script>
   var quotes = [{id:1,scentence:"All things in their being are good for something."},{id:2,scentence:"Difficult circumstances serve as a textbook of life for people."},{id:3,scentence:"Failure is the mother of success.——Thomas Paine"},{id:4,scentence:"For man is man and master of his fate."},{id:5,scentence:"The unexamined life is not worth living.——Socrates"},{id:6,scentence:"None is of freedom or of life deserving unless he daily conquers it anew.——Erasmus"},{id:7,scentence:"Our destiny offers not the cup of despair, but the chalice of opportunity. So let us seize it, not in fear, but in gladness.——R.M. Nixon"}];
 
-  $(function(){
-    for(var i=0;i<quotes.length;i++){
-      var quotes = $("<tr></tr>");
-      quotes.append(quotes[i].scentence);
-      $("#quotes").append(quotes);
-    }
-  });
-
   function selectQ(){
     var s = parseInt(Math.random()*quotes.length);
-    $("#selected").append("选择的格言ID"+quotes[s].id +quotes[s].scentence +"</br>");
+    $("#selected").html(quotes[s].scentence);
+  };
+
+  function shareW(){
+    var txt = $("#selected").html();
+    if(txt){
+      window.open("https://twitter.com/intent/tweet?text="+txt);
+    }
   };
 
   $(document).ready(function() {
