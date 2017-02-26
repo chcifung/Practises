@@ -3,15 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<title>task262</title>
+	<style type="text/css">
+body {
+  font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background: #0091c2;
+}
+
+#weather {
+  width: 825px;
+  height: 1289px;
+  margin: 0px auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+	</style>
 </head>
 <body>
 
-	<iframe src="https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139" width="168" height="54" frameborder="no" border="0" marginwidth="0&quoat; marginheight="0" scrolling="no">00000000000000</iframe>
-	<IFRAME ID='ifm2' WIDTH='189' HEIGHT='190' ALIGN='CENTER' MARGINWIDTH='0' MARGINHEIGHT='0' HSPACE='0' VSPACE='0' FRAMEBORDER='0' SCROLLING='NO' SRC='http://api.openweathermap.org/data/2.5/find?lat=55.5&lon=37.5&cnt=10'></IFRAME>
-
-
-
+	<div id="weather">
+		<h2 id="city"></h2>
+		<iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&id=82" width="250" height="440" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:solid 1px #7ec8ea"></iframe>
+	</div>
 
 	<script type="text/javascript" src='http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
+	<script type="text/javascript">
+		$.getJSON('http://api.jirengu.com/weather.php', function(data) {
+    //data为获取的天气对象
+});
+	</script>
 </body>
 </html>
