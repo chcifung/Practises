@@ -1,6 +1,4 @@
 *{
-	margin: 0;
-	padding:0;
 	background-color: #092B40;
 	color: white;
 }
@@ -9,8 +7,10 @@ a{
 	text-decoration: none;
 }
 
-.searchs{
-	margin: 0 auto;
+.container{
+	width: 480px;
+	margin: 420px auto;
+	font-size: 28px;
 }
 
 #searchTerm{
