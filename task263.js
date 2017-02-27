@@ -5,7 +5,7 @@ $(document).ready(function(){
 		var searchTerm = $("#searchTerm").val();//get search input
 		var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + searchTerm + "&format=json&callback=?";
 			//get url with search input;
-		$.ajax({
+		$.ajax({//ajax request for the api
         type: "GET",
         url: url,
         async: false,
