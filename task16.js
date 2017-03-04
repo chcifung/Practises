@@ -7,22 +7,24 @@
  * };
  */
 var aqiData = {};
-
+var citys = document.getElementById("aqi-city-input");
+var values = document.getElementById("aqi-value-input");
 /**
  * 从用户输入中获取数据，向aqiData中增加一条数据
  * 然后渲染aqi-list列表，增加新增的数据
  */
 function addAqiData() {
-	citys = document.getElementById("aqi-city-input").value;
-	values = document.getElementById("aqi-value-input").value;
+	 city1 = citys.value.trim();
+	value1 = values.value.trim();
+	aqiData[city1] = value1;
 }
 
 /**
  * 渲染aqi-table表格
  */
 function renderAqiList() {
-	citys = citys.trim();
-	values = values.trim();
+	
+
 }
 
 /**
@@ -45,9 +47,9 @@ function addBtnHandle() {
                 trObject1.appendChild(td3);
     var trObject2 = document.createElement('tr');
                 var td4 = document.createElement('td');
-                td4.innerHTML = citys;
+                td4.innerHTML = aqiData[city1];
                 var td5 = document.createElement('td');
-                td5.innerHTML = values;
+                td5.innerHTML = value1;
                 var td6 = document.createElement('button');
                 td6.innerHTML = "删除";
                 trObject2.appendChild(td4);
