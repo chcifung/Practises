@@ -24,7 +24,7 @@ $(document).ready(function(){
 
 		for (var i = 0; i <following.length; i++) {
 			var url2 = 'https://wind-bow.gomix.me/twitch-api/streams/' + following[i] + '/?callback=?';
-			console.log(url2);
+			
 			$.getJSON(url2,function(data3){
 				var logo;
 				var status;
@@ -40,15 +40,31 @@ $(document).ready(function(){
 						+"</div>" + "<div class = 'col-md-4'>" +name +"</div>"+ "<div class = 'col-md-4'>"  +status +"</div></div>"
 						);
 				}
+
+				if(data3.error){
+					$.getJSON(data3._links.channel,function(data5){
+						status = "OFFLINE";
+						logo = data5.logo;
+						name = data5.display_name;
+						if(logo===null){
+							logo = "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRzFnuxU6ipiMZ-ywenUSoTaNsdiLc8dIaatjVuNRZAD5KvAJto-owFgaln";
+						}
+						$("#followerInfo").prepend(
+						"<div class ='row'><div class = 'col-md-4'>" + "<img src='" + logo +"'>"
+						+"</div>" + "<div class = 'col-md-4'>" +name +"</div>"+ "<div class = 'col-md-4'>"  +status +"</div></div>"
+						);
+					})
+				}
 			});
 		}
 
 		for (var i = following.length - 1; i >= 0; i--) {
-			var onlineURL = 'https://wind-bow.gomix.me/twitch-api/streams/' + following[i] +
+			var onlineURL = 'https://wind-bow.gomix.me/twitch-api/streams/' + following[i];
 			$.getJSON(onlineURL,function(data4){
-				if(data4.status != null&& data4.error!=true){
-
-				}
+				
+					var logo = data4.stream;
+					var status = data4.stream;
+					var name = data4.stream;
 			})
 		}
 	})
