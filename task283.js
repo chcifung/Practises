@@ -1,6 +1,6 @@
 function binaryAgent(str) {
   var a =[];
-  a.push(str.split(" "));
+  a.push(str.split(" ").toString(16));
   for(var i = 0;i<a.length;i++){
     var b=[];
     b.push(String.fromCodePoint(a[i]));
