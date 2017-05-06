@@ -26,16 +26,15 @@ var collection = {// Setup
 // Keep a copy of the collection for tests
 var collectionCopy = JSON.parse(JSON.stringify(collection));
 
-// Only change code below this line
 function updateRecords(id, prop, value) {
   if(prop!="tracks"&&value){
     collection[id][prop] = value;
   }else if(prop=="tracks"&&value){
-    if(!collection[id][tracks]){
-    collection[id].prop = [];
-    collection[id].prop = value;
+    if(!collection[id].tracks){
+    collection[id].tracks = [];
+    collection[id].tracks.push(value);
     }else{
-    collection[id][tracks].push(value);
+    collection[id].tracks.push(value);
     }
   }else if(!value){
     delete collection[id][prop];
