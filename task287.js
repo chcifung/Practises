@@ -1,6 +1,4 @@
-
-// Setup
-var collection = {
+var collection = {// Setup
     "2548": {
       "album": "Slippery When Wet",
       "artist": "Bon Jovi",
@@ -30,7 +28,18 @@ var collectionCopy = JSON.parse(JSON.stringify(collection));
 
 // Only change code below this line
 function updateRecords(id, prop, value) {
-  
+  if(prop!="tracks"&&value){
+    collection[id][prop] = value;
+  }else if(prop=="tracks"&&value){
+    if(!collection[id][tracks]){
+    collection[id].prop = [];
+    collection[id].prop = value;
+    }else{
+    collection[id][tracks].push(value);
+    }
+  }else if(!value){
+    delete collection[id][prop];
+  }
   
   return collection;
 }
