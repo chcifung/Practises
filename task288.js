@@ -1,22 +1,31 @@
-function sym() {
-  var arrays = [].slice.apply(arguments);
+function sym(args){
+    var arr = [];
+    var result = [];
+    var units;
+    var index = {};
+    for(var i in arguments){
+        units = arguments[i];
 
-  return [].concat.apply([],               // concatenate
-    arrays.map(                            // versions of the arrays
-      function(array, i) {                 // where each array
-        return array.filter(               // is filtered to contain
-          function(elt) {                  // those elements which
-            return !arrays.some(           // no array
-              function(a, j) {             //
-                return i !== j             // other than the current one
-                  && a.indexOf(elt) >= 0   // contains
-                ;
-              }
-            );
-          }
-        );
-      }
-    )
-  );
+    for(var j = 0; j < units.length; j++){
+         arr.push(units[j]);
+        }
+    }
+
+    arr.forEach(function(a){
+        if(!index[a]){
+            index[a] = 0;
+        }
+            index[a]++;
+
+    });
+
+       for(var l in index){
+           if(index[l] === 1){
+               result.push(+l);
+           }
+       }
+
+    return result;
 }
+
 sym([1, 2, 3], [5, 2, 1, 4]);
