@@ -1,31 +1,32 @@
-function sym(args){
-    var arr = [];
-    var result = [];
-    var units;
-    var index = {};
-    for(var i in arguments){
-        units = arguments[i];
+function sym(args/* pass one or more arrays here */) {
+    var ans = [], cnts = {}, currentMap;
 
-    for(var j = 0; j < units.length; j++){
-         arr.push(units[j]);
+    //count all items in the array
+    for (var i = 0; i < arguments.length; i++){
+        currentMap = {};
+        arguments[i].forEach(function(item) {
+            // if we haven't already counted this item in this array
+            if (!currentMap.hasOwnProperty(item)) {
+                if (cnts.hasOwnProperty(item)) {
+                    // increase cnt
+                    ++cnts[item].cnt;
+                } else {
+                    // initalize cnt and value
+                    cnts[item] = {cnt: 1, val: item};
+                }
+            }
+            // keep track of whethere we've already counted this item in this array
+            currentMap[item] = true;
+        });
+    }
+    // output all items that have a cnt of 1
+    for (var item in cnts) {
+        if (cnts.hasOwnProperty(item) && cnts[item].cnt === 1) {
+            ans.push(cnts[item].val);
         }
     }
 
-    arr.forEach(function(a){
-        if(!index[a]){
-            index[a] = 0;
-        }
-            index[a]++;
-
-    });
-
-       for(var l in index){
-           if(index[l] === 1){
-               result.push(+l);
-           }
-       }
-
-    return result;
+    return ans;
 }
 
 sym([1, 2, 3], [5, 2, 1, 4]);
