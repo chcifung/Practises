@@ -8,7 +8,7 @@ function updateInventory(arr1, arr2) {
   for(var j=0;j<arr2.length;j++){
     a2.push(arr2[j][1]);
   }
-  console.log(a1,a2);
+  console.log(arr1);
     return arr1;
 }
 
