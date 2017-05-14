@@ -1,15 +1,21 @@
+
 function updateInventory(arr1, arr2) {
     // All inventory must be accounted for or you're fired!
-  var a1 = [];
-  var a2 = [];
-  for(var i=0;i<arr1.length;i++){
-    a1.push(arr1[i][1]);
+  if(arr1.length!==0&&arr2.length!==0){
+    for(var i=0;i<arr1.length;i++){
+     for(var j=0;j<arr2.length;j++){
+       if(arr1[i][1]==arr2[j][1]&&arr1[i][0]!=arr2[j][0]){
+        arr1.splice(i,1,arr2[j]);
+       }         
+     }
+     
+   }
+  }else if(arr1.length===0){
+    arr1=arr2;
   }
-  for(var j=0;j<arr2.length;j++){
-    a2.push(arr2[j][1]);
-  }
-  console.log(arr1);
-    return arr1;
+   
+  
+  return arr1;
 }
 
 // Example inventory lists
