@@ -22,7 +22,8 @@ function updateInventory(arr1, arr2) {
       
      for(var j=0;j<arr2.length;j++){
        if(arr1[i][1]==arr2[j][1]&&arr1[i][0]!=arr2[j][0]){
-        arr1.splice(i,1,arr2[j]);
+        //arr1+arr2
+        arr1.splice(i,1,[arr1[i][0]+arr2[j][0],arr1[i][1]]);
        }
        
      }
