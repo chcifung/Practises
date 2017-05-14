@@ -28,7 +28,9 @@ function updateInventory(arr1, arr2) {
     arr1=arr2;
   }
    
-  
+  arr1.sort(function(x,y){
+    return x[1].localeCompare(y[1]);
+  });
   return arr1;
 }
 
