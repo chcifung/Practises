@@ -3,17 +3,21 @@ function updateInventory(arr1, arr2) {
     // All inventory must be accounted for or you're fired!
   if(arr1.length!==0&&arr2.length!==0){
     
+    //get the item names into a array;
     var a1 = [];
     for(var k=0;k<arr1.length;k++){
       a1.push(arr1[k][1]);
     }
     
+    //findout the the item which arr1 not exist then push it in arr1;
     for(l=0;l<arr2.length;l++){
       if(a1.indexOf(arr2[l][1])<0){
         arr1.push(arr2[l]);
       }
     }
     
+
+    //replace and renew the array;
     for(var i=0;i<arr1.length;i++){
       
      for(var j=0;j<arr2.length;j++){
@@ -28,6 +32,7 @@ function updateInventory(arr1, arr2) {
     arr1=arr2;
   }
    
+   //renew the order of the item array with alpha order;
   arr1.sort(function(x,y){
     return x[1].localeCompare(y[1]);
   });
