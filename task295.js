@@ -85,6 +85,45 @@ window.onload = function(){
 					oText.value = this.innerHTML;
 				}
 			}
+
+			//add the operator
+			for(var j=0;j<aPer.length;j++){
+				aPer[j].onclick = function(){
+
+					//calulator
+					if(oPer.value&&oText.value&&oText1.value){
+						var n = eval(oText1.value + oPer.value +oText.value);
+						oText1.value = n;
+						oText1.value = "";
+					}
+
+					//display the result;
+					oPer.value = this.innerHTML;
+				}
+			}
+
+			oDeng.onclick = function(){
+				// add substract multiply divided percent
+				if(oText1.value ==''&&oPer.value ==""&&oText.value==""){
+					return ;
+				}
+				var n = eval(oText1.value + oPer.value + oText.value);
+				oText1.value = "";
+				oText.value = n;
+				oPer.value = "";
+				bClear = true;
+			}
 		}
+	}
+
+	oOn.onclick = function(){
+		bOnOrOffClick = true;
+		fnNum(bOnOrOffClick);
+	}
+
+	oOff.onclick = function(){
+		bOnOrOffClick = false;
+		fnNum(bOnOrOffClick);
+		oText.value = "";
 	}
 }
