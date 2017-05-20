@@ -102,6 +102,7 @@ window.onload = function(){
 				}
 			}
 
+			//calculator get the result;
 			oDeng.onclick = function(){
 				// add substract multiply divided percent
 				if(oText1.value ==''&&oPer.value ==""&&oText.value==""){
@@ -112,6 +113,31 @@ window.onload = function(){
 				oText.value = n;
 				oPer.value = "";
 				bClear = true;
+			}
+
+			//the rec operation
+			oRec.onclick = function(){
+				var a = 1/oText.value;
+				if(a==0){
+					oText1.value = "无穷大";
+				}
+				oText.value = a;
+			}
+
+			//sqiuare
+			oSq.onclick = function(){
+				var a = Math.pow(oText.value,0.5);
+				oText.value = a;
+			}
+
+			oZheng.onclick = function(){
+					oText.value = -oText.value;				
+			}
+
+			oClea.onclick = function(){
+				oText.value = "0";
+				oText1.value = "";
+				oPer.value = "";
 			}
 		}
 	}
