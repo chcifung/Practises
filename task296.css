@@ -13,6 +13,7 @@ header{
 	height: 48px;
 	margin: 40px auto;
 	font-size: 28px;
+	font-family: "Pacifico";
 }
 
 .container{
@@ -23,4 +24,47 @@ header{
 	top: 50%;
 	margin-left: -240px;
 	margin-top: -240px;
+}
+
+.control{
+	width: 400px;
+	height: 20px;
+	font-size: 18px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.operator{
+	padding: 10px;
+	line-height: 18px;
+	font-size: 28px;
+}
+
+.operator span{
+	width: 40px;
+	height: 30px;
+	cursor: pointer;
+	margin: 10px 10px 0px 10px;
+}
+
+.fresh{
+	width: 240px;
+	height: 240px;
+	border: 3px solid green;
+	border-radius: 240px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 50px;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.fresh>p{
+	margin-top: 40px;
+}
+
+#timer{
+	font-size: 44px;
+	padding-top: 30px;
+	color: #598950;
 }
