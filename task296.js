@@ -23,8 +23,8 @@ substract.onclick = function(){
 var switchs = false;
 
 fresh.onclick = function(){
-	var a = new Date();
-	var b = a.getTime();
-	var c = b+(Number(period.innerHTML))*60000;
-	console.log(b,c);
+	var lefttime = Number(period.innerHTML)*60;
+	var m = parseInt(lefttime/60%60);
+	var s = parseInt(lefttime%60);
+	console.log(s);
 }
