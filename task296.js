@@ -22,9 +22,21 @@ substract.onclick = function(){
 
 var switchs = false;
 
-fresh.onclick = function(){
-	var lefttime = Number(period.innerHTML)*60;
-	var m = parseInt(lefttime/60%60);
-	var s = parseInt(lefttime%60);
+function showTime(){
+	var now = new Date();
+
+	var periodtime = Number(period.innerHTML)*60;
+	var end = now.getTime() + periodtime*1000;
+	//var m = parseInt(lefttime/60%60);
+	//var s = parseInt(lefttime%60);
+	var m = (end - now)/1000/60%60;
+	var s = (end - now)/1000%60;
 	console.log(s);
 }
+
+fresh.onclick = function(){
+	//get the left seconds
+	
+	setTimeout(showTime,500);
+}
+
