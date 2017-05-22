@@ -2,16 +2,14 @@ var fresh = document.getElementsByClassName("fresh")[0];
 var substract  = document.getElementById("substract");
 var add = document.getElementById("add");
 var period = document.getElementById("period");
+var a = Number(period.innerHTML);
 
 add.onclick = function(){
-	var a = Number(period.innerHTML);
 	a +=1;
 	period.innerHTML = a;
 }
 
 substract.onclick = function(){
-
-	var a = Number(period.innerHTML);
 	if(a>0){
 		a -=1;
 		period.innerHTML = a;
@@ -22,21 +20,26 @@ substract.onclick = function(){
 
 var switchs = false;
 
-function showTime(){
-	var now = new Date();
+var periodtime = a*60;
+var now = new Date();
+var end = now.getTime() + periodtime*1000;
 
-	var periodtime = Number(period.innerHTML)*60;
-	var end = now.getTime() + periodtime*1000;
+function showTime(){
+
+	var nows = new Date();	
 	//var m = parseInt(lefttime/60%60);
 	//var s = parseInt(lefttime%60);
-	var m = (end - now)/1000/60%60;
-	var s = (end - now)/1000%60;
-	console.log(s);
+	var m = parseInt((end - nows)/1000/60%60);
+	var s = parseInt((end - nows)/1000%60);
+	var timer = document.getElementById("timer");
+	timer.innerHTML = m +":" +s;
+	setTimeout(showTime,500);
 }
 
 fresh.onclick = function(){
 	//get the left seconds
 	
-	setTimeout(showTime,500);
+	showTime();
+	
 }
 
