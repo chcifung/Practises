@@ -36,7 +36,12 @@ fresh.onclick = function(){
 		var m = parseInt((end - nows)/1000/60%60);
 		var s = parseInt((end - nows)/1000%60);
 		var timer = document.getElementById("timer");
-		timer.innerHTML = m +":" +s;
+		if(s<10){
+			timer.innerHTML = m +":0" +s;
+		}else{
+			timer.innerHTML = m +":" +s;
+		}
+		
 		setTimeout(showTime,500);
 	}
 	
