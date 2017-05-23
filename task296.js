@@ -24,7 +24,7 @@ var switchs = false;
 
 fresh.onclick = function(){
 	//get the left seconds
-
+	var t;
 
 	var now = new Date();
 	var end = now.getTime() + a*60*1000;
@@ -42,17 +42,15 @@ fresh.onclick = function(){
 			timer.innerHTML = m +":" +s;
 		}
 		
-		setTimeout(showTime,500);
+		t = setTimeout(showTime,500);
 	}
 	
-	if(!switchs){
+	
 		showTime();
 		switchs = true;
-		console.log(1);
-	}else{
-		setInterval(showTime,1000);
-	}
-	
+		this.onclick = function(){
+			clearTimeout(t);
+		}
 	
 }
 
