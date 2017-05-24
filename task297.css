@@ -1,0 +1,29 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	width: 340px;
+	height: 320px;
+	margin: 10px auto;
+	padding-top: 20px;
+	padding-left: 10px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+}
+
+.cells{
+	width: 80px;
+	height: 80px;
+	display: block;
+	float: left;
+	margin: 0 0 20px 20px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	color: #777;
+	text-decoration: none;
+	font-size: 60px;
+	line-height: 80px;
+	text-align: center;
+}
