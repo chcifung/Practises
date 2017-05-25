@@ -55,7 +55,7 @@ function checkWin(x,y){
 	}
 
 	//case four in left bottom
-	if((x==2&&y==0)||(x==1&&y==1)||(x==0&&y==2){
+	if((x==2&&y==0)||(x==1&&y==1)||(x==0&&y==2)){
 		if(model[x][y]!=0&&model[2][0]==model[1][1]&&model[0][2]==model[1][1]){
 			return 1;
 		}
@@ -63,4 +63,8 @@ function checkWin(x,y){
 
 	//default;
 	return 0;
+}
+
+window.onload = function(){
+	
 }
