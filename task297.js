@@ -1,10 +1,10 @@
 var tick = "o";
 var cross = "x";
 
-var model = [];
-var cells = [];
+var model = [];//store the data model, 0 means empty 1 means o 2 means x;
+var cells = [];//store the a type
 
-var flag;
+var flag;//the turn
 
 
 //start a new game
@@ -66,5 +66,38 @@ function checkWin(x,y){
 }
 
 window.onload = function(){
-	
+	var i,i;
+	for(i=0;i<3;i++){
+		model[i] = [];
+		cells[i] = [];
+	}
+
+	for(i=0;i<3;i++){
+		for(j=0;j<3;j++){
+			cells[j][i] = document.getElementById("cell"+"-"+i+"-"+j);
+			(function(j,i){//anoymous function to get the i,j
+				cells[j][i].onclick = function(){
+					console.log(this);
+					model[j][i] = flag +1;
+					if(flag){
+						flag = 0;
+					}else{
+						flag = 1;
+					}
+
+					freshView();
+
+					if(checkWin(j,i)){
+						if(flag){
+							alert(cross+"赢啦");
+						}else{
+							alert(tick+"赢啦");
+						}
+						newGame();
+					}
+				}
+			})(i,j);
+		}
+	}
+	newGame();
 }
