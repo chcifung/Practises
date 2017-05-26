@@ -9,8 +9,8 @@ var flag;//the turn
 
 //start a new game
 function newGame(){
-	for(var i=0;i<3;i++){
-		for(var j=0;j<3;j++){
+	for(i=0;i<3;i++){
+		for(j=0;j<3;j++){
 			model[i][j] = 0;
 			cells[i][j].text = " ";
 		}
@@ -22,12 +22,13 @@ function newGame(){
 
 //fresh the content of html
 function freshView(){
-	for(var i=0;i<3;j++){
-		for(var j=0;j<3;j++){
+	var i,j;
+	for(i=0;i<3;i++){
+		for(j=0;j<3;j++){
 			if(model[i][j]==1){
-				cells[i][j]=cross;
+				cells[i][j].text=cross;
 			}else if(model[i][j]==2){
-				cells[i][j]=tick;
+				cells[i][j].text=tick;
 			}
 		}
 	}
@@ -66,7 +67,7 @@ function checkWin(x,y){
 }
 
 window.onload = function(){
-	var i,i;
+	var i,j;
 	for(i=0;i<3;i++){
 		model[i] = [];
 		cells[i] = [];
@@ -74,11 +75,14 @@ window.onload = function(){
 
 	for(i=0;i<3;i++){
 		for(j=0;j<3;j++){
-			cells[j][i] = document.getElementById("cell"+"-"+i+"-"+j);
+
+			cells[j][i] = document.getElementById("cell-"+i+"-"+j);
+
 			(function(j,i){//anoymous function to get the i,j
-				cells[j][i].onclick = function(){
-					console.log(this);
-					model[j][i] = flag +1;
+				cells[i][j].onclick = function(){
+					
+					model[i][j] = flag +1;
+					
 					if(flag){
 						flag = 0;
 					}else{
@@ -87,17 +91,23 @@ window.onload = function(){
 
 					freshView();
 
-					if(checkWin(j,i)){
+					if(checkWin(i,j)){
 						if(flag){
 							alert(cross+"赢啦");
 						}else{
 							alert(tick+"赢啦");
+
 						}
 						newGame();
 					}
 				}
 			})(i,j);
 		}
+
 	}
 	newGame();
+	
 }
+
+
+
