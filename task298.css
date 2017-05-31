@@ -1,0 +1,25 @@
+*{
+	margin: 0;
+	padding: 0;
+	background-color: #ccc;
+}
+
+.container{
+	position: relative;
+	width: 800px;
+	height: 860px;
+	margin: 30px auto;
+	border: 1px solid #aaa;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.container h1{
+	color: #328490;
+	text-align: center;
+}
+
+.container h4{
+	color: #324490;
+	text-align: right;
+}
