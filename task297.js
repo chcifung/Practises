@@ -89,7 +89,7 @@ window.onload = function(){
 						flag = 1;
 					}
 
-					freshView();
+					freshView();//the turn
 
 					if(checkWin(i,j)){
 						if(flag){
