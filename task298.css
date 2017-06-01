@@ -23,3 +23,10 @@
 	color: #324490;
 	text-align: right;
 }
+
+.container button{
+	width: 200px;
+	height: 30px;
+	color: white;
+	box-shadow: none;
+}
