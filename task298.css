@@ -52,6 +52,7 @@
 	right: 50%;
 	bottom: 50%;
 	border-radius: 100% 0 50% 0 ;
+	cursor: pointer;
 }
 
 #sx2{
@@ -64,6 +65,7 @@
 	left: 50%;
 	bottom: 50%;
 	border-radius:  0 100% 0 50%;
+	cursor: pointer;
 }
 
 #sx3{
@@ -76,7 +78,7 @@
 	right: 50%;
 	top: 50%;
 	border-radius:  0 50% 0 100%;
-	
+	cursor: pointer;
 }
 
 #sx4{
@@ -89,6 +91,7 @@
 	left: 50%;
 	top: 50%;
 	border-radius:  50% 0 100%  0;
+	cursor: pointer;
 }
 
 #display{
