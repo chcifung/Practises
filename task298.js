@@ -67,3 +67,11 @@ $("#sx4").click(function(){
 		audios[3].pause();
 	}
 });
+
+var numbers = [];
+
+function randomMusic(){
+
+	numbers.push(Math.floor(Math.random()*4+1));
+	console.log(numbers);
+}

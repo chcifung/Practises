@@ -94,7 +94,7 @@
 	cursor: pointer;
 }
 
-#display{
+.display{
 	width: 160px;
 	height: 160px;
 	background-color: #e85499;
