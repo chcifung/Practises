@@ -35,7 +35,7 @@ jQuery.fn.flash = function( color, duration )
 
 $("#sx1").click(function(){
 	event.stopPropagation();
-	$("#sx1").fadeIn(100).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
+	$("#sx1").fadeIn(500).fadeOut(100).fadeIn(500);
 	numbers2.push(0);
 	if(audios[0].paused){
 		
@@ -50,6 +50,7 @@ $("#sx1").click(function(){
 
 $("#sx2").click(function(){
 	event.stopPropagation();
+	$("#sx2").fadeIn(500).fadeOut(100).fadeIn(500);
 	numbers2.push(1);
 	if(audios[1].paused){
 		
@@ -62,6 +63,7 @@ $("#sx2").click(function(){
 
 $("#sx3").click(function(){
 	event.stopPropagation();
+	$("#sx3").fadeIn(500).fadeOut(100).fadeIn(500);
 	numbers2.push(2);
 	if(audios[2].paused){
 		
@@ -74,6 +76,7 @@ $("#sx3").click(function(){
 
 $("#sx4").click(function(){
 	event.stopPropagation();
+	$("#sx4").fadeIn(500).fadeOut(100).fadeIn(500);
 	numbers2.push(3);
 	console.log(numbers2);
 	if(audios[3].paused){
