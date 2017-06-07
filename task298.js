@@ -20,9 +20,10 @@ switchs.onclick = function(){
 	}	
 
 	var a = display.innerHTML;
-	for(var i=0;i<a+1;i++){
+	for(var i=0;i<15;i++){
 		numbers.push(Math.floor(Math.random()*4));
 		audios[numbers[0]].play();
+		display.innerHTML = i;
 	}
 }
 
