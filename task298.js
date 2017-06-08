@@ -27,12 +27,6 @@ switchs.onclick = function(){
 	}
 }
 
-jQuery.fn.flash = function( color, duration )
-{
-  var current = this.css( 'color' );
-  this.animate( { color: 'rgb(' + color + ')' }, duration / 2 );
-  this.animate( { color: current }, duration / 2 );
-}
 
 $("#sx1").click(function(){
 	event.stopPropagation();
