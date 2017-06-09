@@ -16,7 +16,7 @@ switchs.onclick = function(){
 	}else{
 		switchs.innerHTML = "START";
 		display.innerHTML = "";
-	console.log("b");
+	console.log("a");
 	}	
 
 	var a = display.innerHTML;
