@@ -3,13 +3,24 @@ var display = document.getElementById("display");
 var numbers = [];
 var numbers2 = [];
 var audios = [];
+var round = 0;
 
 for(var j =1;j<5;j++){
-var a = document.getElementById("audio"+j);
-audios.push(a);
+	var a = document.getElementById("audio"+j);
+	audios.push(a);
 }
 
 switchs.onclick = function(){
+	var a = display.innerHTML;
+	for(var i=0;i<15;i++){
+		numbers.push(Math.floor(Math.random()*4));//create the random numbers in array 
+		audios[numbers[0]].play();
+		display.innerHTML = i;
+	}
+
+	for(var j=0;j<round+1;j++){
+
+	}
 	if(switchs.innerHTML=="START"){
 		switchs.innerHTML = "STOP";
 		display.innerHTML = 0;
@@ -19,12 +30,7 @@ switchs.onclick = function(){
 	console.log("a");
 	}	
 
-	var a = display.innerHTML;
-	for(var i=0;i<15;i++){
-		numbers.push(Math.floor(Math.random()*4));
-		audios[numbers[0]].play();
-		display.innerHTML = i;
-	}
+	
 }
 
 
