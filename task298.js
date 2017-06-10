@@ -1,8 +1,8 @@
 var switchs = document.getElementById("switch");
 var display = document.getElementById("display");
-var numbers = [];
-var numbers2 = [];
-var audios = [];
+var numbers = [];//an array to store computer’s output
+var numbers2 = [];//an array to store player’s input
+var audios = [];//store the audios into an array
 var round = 0;
 
 for(var j =1;j<5;j++){
@@ -10,17 +10,22 @@ for(var j =1;j<5;j++){
 	audios.push(a);
 }
 
-switchs.onclick = function(){
+
+function newRound(){
 	var a = display.innerHTML;
-	for(var i=0;i<15;i++){
-		numbers.push(Math.floor(Math.random()*4));//create the random numbers in array 
-		audios[numbers[0]].play();
-		display.innerHTML = i;
-	}
+	numbers.push(Math.floor(Math.random()*4));//create the random numbers in array 
+	audios[numbers[0]].play();
+	display.innerHTML = round;
+	$("#sx"+(numbers[0]+1)).fadeIn(500).fadeOut(100).fadeIn(500);//fade the color block
+	round+=1;
 
 	for(var j=0;j<round+1;j++){
 
 	}
+}
+
+switchs.onclick = function(){
+	newRound();
 	if(switchs.innerHTML=="START"){
 		switchs.innerHTML = "STOP";
 		display.innerHTML = 0;
