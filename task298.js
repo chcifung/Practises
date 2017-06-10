@@ -14,21 +14,24 @@ for(var j =1;j<5;j++){
 function newRound(){
 	var a = display.innerHTML;
 	numbers.push(Math.floor(Math.random()*4));//create the random numbers in array 
-	audios[numbers[0]].play();
+	audios[numbers[round]].play();
 	display.innerHTML = round;
-	$("#sx"+(numbers[0]+1)).fadeIn(500).fadeOut(100).fadeIn(500);//fade the color block
+	$("#sx"+(numbers[round]+1)).fadeIn(500).fadeOut(100).fadeIn(500);//fade the color block
 	round+=1;
 
-	for(var j=0;j<round+1;j++){
-
-	}
+	
+		setInterval(newAound(),1000);
+	
 }
 
+function newAound(){
+	console.log("a");
+}
 switchs.onclick = function(){
 	newRound();
 	if(switchs.innerHTML=="START"){
 		switchs.innerHTML = "STOP";
-		display.innerHTML = 0;
+		display.innerHTML = round;
 	}else{
 		switchs.innerHTML = "START";
 		display.innerHTML = "";
