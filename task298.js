@@ -19,8 +19,7 @@ function newRound(){
 	$("#sx"+(numbers[round]+1)).fadeIn(500).fadeOut(100).fadeIn(500);//fade the color block
 	round+=1;
 
-	
-		setInterval(newAound(),1000);
+	setInterval(newAound(),1000);
 	
 }
 
