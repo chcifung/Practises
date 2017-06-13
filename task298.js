@@ -17,27 +17,29 @@ function newRound(){
 	audios[numbers[round]].play();
 	display.innerHTML = round;
 	$("#sx"+(numbers[round]+1)).fadeIn(500).fadeOut(100).fadeIn(500);//fade the color block
-	round+=1;
+	round+=1;	
+}
 
-	setInterval(newAound(),3000);
+function clearGame(){
+	numbers = [];
+	numbers2 = [];
+	addGame();
+}
+
+function addGame(){
 	
 }
 
-function newAound(){
-	console.log("a");
-}
 switchs.onclick = function(){
 	newRound();
 	if(switchs.innerHTML=="START"){
 		switchs.innerHTML = "STOP";
-		display.innerHTML = round;
+		$("#display").text = round;
 	}else{
 		switchs.innerHTML = "START";
 		display.innerHTML = "";
 	console.log("a");
 	}	
-
-	
 }
 
 
