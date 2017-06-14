@@ -1,3 +1,4 @@
+$(document).ready(function(){
 var switchs = document.getElementById("switch");
 var display = document.getElementById("display");
 var numbers = [];//an array to store computer’s output
@@ -17,12 +18,12 @@ function newGame(){
 
 function clearGame(){
 	numbers = [];
-	numbers2 = [];
+	round = 0;
 	addGame();
 }
 
 function addGame(){
-	round+=1;	
+	round++;	
 	display.innerHTML = round;
 	generateMove();
 
@@ -31,6 +32,7 @@ function addGame(){
 function generateMove(){
 	numbers.push(Math.floor(Math.random()*4));//create the random numbers in array 
 	showMoves();
+
 }
 
 function showMoves(){
@@ -49,9 +51,11 @@ function clearPlayer(){
 	numbers2= [];
 }
 
+
+
 function playGame(){
-	$("#sx"+(numbers[round-1])).fadeIn(500).fadeOut(100).fadeIn(500);//fade the color block
-	audios[numbers[round-1]].play();
+	$("#sx"+(numbers[round])).fadeIn(500).fadeOut(100).fadeIn(500);//fade the color block
+	audios[numbers[round]].play();
 }
 
 function playerTurn(){
@@ -71,9 +75,10 @@ function playerTurn(){
 	}
 }
 
+newGame();
 
 switchs.onclick = function(){
-	newGame();
+	
 	console.log(round);
 	if(switchs.innerHTML=="START"){
 		switchs.innerHTML = "STOP";
@@ -147,5 +152,7 @@ $("#sx4").click(function(){
 		audios[3].pause();
 	}
 	
+});
+
 });
 
