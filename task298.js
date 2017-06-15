@@ -1,16 +1,15 @@
 $(document).ready(function(){
-var switchs = document.getElementById("switch");
-var display = document.getElementById("display");
-var numbers = [];//an array to store computer’s output
-var numbers2 = [];//an array to store player’s input
-var audios = [];//store the audios into an array
-var round = 0;
+	var switchs = document.getElementById("switch");
+	var display = document.getElementById("display");
+	var numbers = [];//an array to store computer’s output
+	var numbers2 = [];//an array to store player’s input
+	var audios = [];//store the audios into an array
+	var round = 0;
 
-for(var j =1;j<5;j++){
-	var a = document.getElementById("audio"+j);
-	audios.push(a);
-}
-
+	for(var j =1;j<5;j++){
+		var a = document.getElementById("audio"+j);
+		audios.push(a);
+	}
 
 function newGame(){
 	clearGame();		
@@ -26,13 +25,11 @@ function addGame(){
 	round++;	
 	display.innerHTML = round;
 	generateMove();
-
 }
 
 function generateMove(){
 	numbers.push(Math.floor(Math.random()*4));//create the random numbers in array 
 	showMoves();
-
 }
 
 function showMoves(){
@@ -52,14 +49,14 @@ function clearPlayer(){
 }
 
 
-
-function playGame(){
-	$("#sx"+(numbers[round])).fadeIn(500).fadeOut(100).fadeIn(500);//fade the color block
-	audios[numbers[round]].play();
+function playGame(block){//"#sx"+(numbers[round])=block
+	$("#sx"+block).fadeIn(500).fadeOut(100).fadeIn(500);//fade the color block
+	//audios[numbers[round]].play();
+	audios[round].play();
 }
 
 function playerTurn(){
-	if(numbers2[numbers.length-1]!==numbers[numbers2.length-1]){
+	if(numbers2[numbers2.length-1]!==numbers[numbers2.length-1]){
 		alert("Wrong step, please try again!");
 		newGame();
 	}else{
@@ -75,11 +72,10 @@ function playerTurn(){
 	}
 }
 
-newGame();
 
 switchs.onclick = function(){
-	
-	console.log(round);
+	newGame();
+	console.log(numbers,numbers2);
 	if(switchs.innerHTML=="START"){
 		switchs.innerHTML = "STOP";
 		$("#display").text = round;
@@ -89,69 +85,36 @@ switchs.onclick = function(){
 	}	
 }
 
-
 $("#sx1").click(function(){
 	event.stopPropagation();
-	
-	numbers2.push(0);
-	if(audios[0].paused){
-		$("#sx1").fadeIn(500).fadeOut(100).fadeIn(500);
-		audios[0].play();
-		playerTurn();
-		return;
-	}else{
-		audios[0].pause();
-	}
-	
+	numbers2.push(1);
+	$("#sx1").fadeIn(500).fadeOut(100).fadeIn(500);
+	audios[0].play();
+   	playerTurn();
 });
 
 $("#sx2").click(function(){
 	event.stopPropagation();
-	
-	numbers2.push(1);
-	
-	if(audios[1].paused){
-		$("#sx2").fadeIn(500).fadeOut(100).fadeIn(500);
-		audios[1].play();
-		playerTurn();
-		return;
-	}else{
-		audios[1].pause();
-	}
-	
+	numbers2.push(2);
+	$("#sx2").fadeIn(500).fadeOut(100).fadeIn(500);     
+   		audios[1].play();
+   		playerTurn();
 });
 
 $("#sx3").click(function(){
 	event.stopPropagation();
-	
-	numbers2.push(2);
-	
-	if(audios[2].paused){
-		$("#sx3").fadeIn(500).fadeOut(100).fadeIn(500);
-		audios[2].play();
-		playerTurn();
-		return;
-	}else{
-		audios[2].pause();
-	}
-	
+	numbers2.push(3);
+	$("#sx3").fadeIn(500).fadeOut(100).fadeIn(500);   
+   		audios[2].play();
+   		playerTurn();
 });
 
 $("#sx4").click(function(){
 	event.stopPropagation();
-	
-	numbers2.push(3);
-	
-	console.log(numbers2);
-	if(audios[3].paused){
-		$("#sx4").fadeIn(500).fadeOut(100).fadeIn(500);
-		audios[3].play();
-		playerTurn();
-		return;
-	}else{
-		audios[3].pause();
-	}
-	
+	numbers2.push(4);
+	$("#sx4").fadeIn(500).fadeOut(100).fadeIn(500);     
+   		audios[3].play();
+   		playerTurn();
 });
 
 });
