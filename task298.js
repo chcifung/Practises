@@ -52,7 +52,9 @@ function clearPlayer(){
 function playGame(block){//"#sx"+(numbers[round])=block
 	$("#sx"+block).fadeIn(500).fadeOut(100).fadeIn(500);//fade the color block
 	//audios[numbers[round]].play();
-	audios[round].play();
+	var a =block-1;
+	console.log(audios[block],$("#sx"+block));
+	audios[a].play();
 }
 
 function playerTurn(){
@@ -72,10 +74,8 @@ function playerTurn(){
 	}
 }
 
-
 switchs.onclick = function(){
 	newGame();
-	console.log(numbers,numbers2);
 	if(switchs.innerHTML=="START"){
 		switchs.innerHTML = "STOP";
 		$("#display").text = round;
@@ -88,25 +88,25 @@ switchs.onclick = function(){
 $("#sx1").click(function(){
 	event.stopPropagation();
 	numbers2.push(1);
-	$("#sx1").fadeIn(500).fadeOut(100).fadeIn(500);
 	audios[0].play();
+	$("#sx1").fadeIn(500).fadeOut(100).fadeIn(500);
    	playerTurn();
 });
 
 $("#sx2").click(function(){
 	event.stopPropagation();
-	numbers2.push(2);
-	$("#sx2").fadeIn(500).fadeOut(100).fadeIn(500);     
-   		audios[1].play();
-   		playerTurn();
+	numbers2.push(2);	   
+   	audios[1].play();
+   	$("#sx2").fadeIn(500).fadeOut(100).fadeIn(500);  
+   	playerTurn();
 });
 
 $("#sx3").click(function(){
 	event.stopPropagation();
-	numbers2.push(3);
-	$("#sx3").fadeIn(500).fadeOut(100).fadeIn(500);   
-   		audios[2].play();
-   		playerTurn();
+	numbers2.push(3);	   
+   	audios[2].play();
+   	$("#sx3").fadeIn(500).fadeOut(100).fadeIn(500);
+   	playerTurn();
 });
 
 $("#sx4").click(function(){
