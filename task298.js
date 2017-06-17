@@ -53,7 +53,7 @@ function playGame(block){//"#sx"+(numbers[round])=block
 	$("#sx"+block).fadeIn(500).fadeOut(100).fadeIn(500);//fade the color block
 	//audios[numbers[round]].play();
 	var a =block-1;
-	console.log(audios[block],$("#sx"+block));
+	//console.log(audios[block],$("#sx"+block));
 	audios[a].play();
 }
 
